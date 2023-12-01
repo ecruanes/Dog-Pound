@@ -49,17 +49,24 @@ public class MainActivity extends Activity
     }
 
     // paw animation 
-    private void animatePaw(long time){
+    private void animatePaw(long time)
+    {
+        //declare handler for paws for generation timing
         Handler pawHandler = new Handler();
-        new CountDownTimer(time, 1000) {
-            public void onTick(long time_left) {
+        new CountDownTimer(time, 1000) //initialize timer for paws
+        {
+            public void onTick(long time_left) 
+            {
+                //display paws on screen
                 ImageView paw_one = findViewById(paw1);
                 ImageView paw_two = findViewById(paw2);
                 paw_one.setImageResource(R.drawable.paw2);
                 paw_two.setImageResource(R.drawable.paw);
-                pawHandler.postDelayed(new Runnable() {
+                pawHandler.postDelayed(new Runnable() 
+                {
                     @Override
-                    public void run() {
+                    public void run() 
+                    {
                         paw_one.setImageResource(R.drawable.paw);
                         paw_two.setImageResource(R.drawable.paw2);
                     }
