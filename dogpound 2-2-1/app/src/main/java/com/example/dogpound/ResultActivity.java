@@ -12,7 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ResultActivity extends Activity implements OnClickListener
-{   //declare restart button and score variables
+{   
+    //declare restart button and score variables
     private static int highScore=0;
     private Button button_restart;
     private TextView textView_highScore, textView_score, textView_congrats;
@@ -22,8 +23,8 @@ public class ResultActivity extends Activity implements OnClickListener
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
-    //launches result page with components
     {
+        //launches result page with components
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result); //sets result page layout
 
@@ -33,6 +34,7 @@ public class ResultActivity extends Activity implements OnClickListener
 
         if(score > highScore)
         {
+            //compares recent score and high score
             congrats = MediaPlayer.create(this, R.raw.congrats); //background music
             congrats.start(); //starts music
             highScore = score; //redefines high score
