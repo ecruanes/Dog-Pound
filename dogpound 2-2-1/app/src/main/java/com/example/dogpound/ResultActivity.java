@@ -34,12 +34,12 @@ public class ResultActivity extends Activity implements OnClickListener
         if(score > highScore)
         {
             congrats = MediaPlayer.create(this, R.raw.congrats); //background music
-            congrats.start();
-            highScore = score;
-            textView_congrats = findViewById(R.id.newhighscore);
-            textView_congrats.setText("New High Score!");
+            congrats.start(); //starts music
+            highScore = score; //redefines high score
+            textView_congrats = findViewById(R.id.newhighscore); //displays new high score
+            textView_congrats.setText("New High Score!"); 
 
-            //animate congrats dog
+            //animation for congrats dog
             Handler congratsHandler = new Handler();
             ImageView congratsDog = findViewById(R.id.saddog);
             congratsDog.setImageResource(R.drawable.congratsdog1);
@@ -70,7 +70,8 @@ public class ResultActivity extends Activity implements OnClickListener
 
     @Override
     public void onClick(View again)
-    {   //go to StartActivity page when restart button is clicked
+    {   
+        //go to StartActivity page when restart button is clicked
         Intent StartActivity = new Intent(ResultActivity.this, StartActivity.class);
         startActivity(StartActivity); //start StartActivity
     }
