@@ -154,6 +154,7 @@ public class MainActivity extends Activity
     private void setClickListener()
     //click listeners for mole buttons
     {
+        //indexing through holes to find the dog and declare as clickable
         for (int i = 0; i < holes.length; i++)
         {
             final int index = i;
@@ -180,10 +181,11 @@ public class MainActivity extends Activity
     {
         //increases score by 1 when dog is clicked
         pop.start();
+        //resets image to hole
         ImageButton clickedMole = findViewById(holes[index]);
-        clickedMole.setImageResource(R.drawable.hole);
+        clickedMole.setImageResource(R.drawable.hole); 
         clickedMole.setClickable(false);
-        score++;
+        score++; 
         textView_score.setText("Score: " + score); //displays score
     }
 
@@ -191,6 +193,7 @@ public class MainActivity extends Activity
     {
         //decreases score by 1 when bird is clicked
         buzz.start();
+        //resets image to hole
         ImageButton clickedBird = findViewById(holes[index]);
         clickedBird.setImageResource(R.drawable.hole);
         clickedBird.setClickable(false);
