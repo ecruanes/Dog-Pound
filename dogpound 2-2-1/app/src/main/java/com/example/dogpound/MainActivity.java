@@ -41,8 +41,9 @@ public class MainActivity extends Activity
         long time = 15000; //initializes player's game time
         textView_score = findViewById(R.id.currentscore); //calls text ID to display score
 
-        //functions to operate game
         animatePaw(time);
+
+        //functions to operate game
         startTimer(time); //starts timer for game
         generateAnimals(time); //generates moles during game
         setClickListener(); //animal buttons' click listeners
@@ -202,7 +203,7 @@ public class MainActivity extends Activity
         if (score == 0)
             score = 0;
         else
-            score--;
+            score = score - 1;
 
         textView_score.setText("Score: " + score); //displays score
     }
