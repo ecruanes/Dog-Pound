@@ -91,7 +91,7 @@ public class MainActivity extends Activity
             public void onFinish()
             //determines high score and goes to ResultActivity page when game is finished
             {
-                //declare intent to switch to StartActivity
+                //declare intent to switch to ResultActivity
                 Intent ResultActivity = new Intent(MainActivity.this, ResultActivity.class);
                 ResultActivity.putExtra("SCORE", score); //push score to results
                 song.pause(); //stop background music
