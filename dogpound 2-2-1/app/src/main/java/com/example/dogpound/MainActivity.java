@@ -202,7 +202,7 @@ public class MainActivity extends Activity
         if (score == 0)
             score = 0;
         else
-            score = score - 1;
+            score--;
 
         textView_score.setText("Score: " + score); //displays score
     }
