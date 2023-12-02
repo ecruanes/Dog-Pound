@@ -38,7 +38,7 @@ public class MainActivity extends Activity
         song.start(); //start song with game
 
         textView_time = findViewById(R.id.timedisplay); //calls text ID to display time
-        long time = 15000; //initializes player's game time
+        long time = 30000; //initializes player's game time
         textView_score = findViewById(R.id.currentscore); //calls text ID to display score
 
         //functions to operate game
